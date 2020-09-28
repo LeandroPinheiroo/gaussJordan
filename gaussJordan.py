@@ -13,7 +13,7 @@ def gauss(matrix,vector):
     for k in range(n):
         #Realiza o pivoteamento
         for i in range(k+1,n):
-            if np.fabs(matrix[i][k]) > np.fabs(matrix[k][k]):
+            if matrix[i][k] > matrix[k][k]:
                 for j in range(k,n):
                     matrix[k][j],matrix[i][j] = matrix[i][j],matrix[k][j]
                 vector[k],vector[i] = vector[i],vector[k]
